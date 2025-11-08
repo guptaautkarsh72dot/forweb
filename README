@@ -1,0 +1,76 @@
+# Full-Stack Flask Application
+
+A full-stack web application with Flask backend and browser-based frontend.
+
+## Features
+
+- **Backend**: Flask server with RESTful API endpoints
+- **Frontend**: Modern HTML/CSS/JavaScript interface
+- **Backend Logic**: All processing happens on the Python backend
+- **Local Development**: Runs entirely on your local machine
+
+## Project Structure
+
+```
+laddu/
+├── app.py                 # Flask backend application
+├── requirements.txt       # Python dependencies
+├── templates/
+│   └── index.html        # Frontend HTML
+└── static/
+    ├── style.css         # Frontend styles
+    └── script.js         # Frontend JavaScript
+```
+
+## Setup Instructions
+
+### 1. Install Python Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Run the Flask Server
+
+```bash
+python app.py
+```
+
+The server will start on `http://localhost:5000`
+
+### 3. Open in Browser
+
+Once the server is running, open your browser and navigate to:
+```
+http://localhost:5000
+```
+
+## API Endpoints
+
+- `GET /` - Serves the main HTML page
+- `GET /api/data` - Get all stored data
+- `POST /api/data` - Add new data (requires JSON body with `message` field)
+- `DELETE /api/data/<id>` - Delete data by ID
+- `POST /api/process` - Process text on the backend (requires JSON body with `text` field)
+
+## How It Works
+
+1. **Backend (Flask)**: Handles all business logic, data processing, and API requests
+2. **Frontend (Browser)**: Sends requests to the backend API and displays results
+3. **Communication**: Frontend uses JavaScript `fetch()` to communicate with Flask API endpoints
+
+## Example Usage
+
+1. **Add Data**: Enter a message in the "Add Data" section and submit
+2. **Process Text**: Enter text in the "Process Text" section to see backend processing (word count, character count, reversed text, etc.)
+3. **View Data**: All stored data appears in the "Stored Data" section
+4. **Delete Data**: Click the delete button on any item to remove it
+
+## Notes
+
+- The backend runs on port 5000 by default
+- All data is stored in memory (will be lost on server restart)
+- For production, consider using a database instead of in-memory storage
+- CORS is enabled to allow frontend-backend communication
+
+"# forweb" 
